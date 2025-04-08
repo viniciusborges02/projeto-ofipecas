@@ -1,3 +1,11 @@
+:root {
+  --cor-1: #fcd42c; /* amarelo vibrante */
+  --cor-2: #f3cc4c; /* amarelo claro */
+  --cor-3: #692123; /* vinho escuro */
+  --cor-4: #848384; /* cinza médio */
+  --cor-5: #bcbcbc; /* cinza claro */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +14,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background: #f9f9f9;
+    background: var(--cor-4);
     color: #333;
   }
   
@@ -21,10 +29,8 @@
     justify-content: center;
   }
   
-  header h1 {
-    text-align: center;
-    flex: 1;
-    font-size: 1.8rem;
+  header img {
+    max-width: 150px;
   }
   
   #menu-btn {
@@ -39,7 +45,7 @@
   
   /* Menu lateral */
   #side-menu {
-    background-color: #333;
+    background-color: #06021b;
     color: white;
     position: absolute;
     top: 60px;
@@ -61,6 +67,11 @@
   #side-menu a {
     color: white;
     text-decoration: none;
+  }
+
+  #side-menu a:hover{
+    background: var(--cor-5);
+    color: black;
   }
   
   #side-menu.hidden {
@@ -121,11 +132,21 @@
   
   /* Rodapé */
   footer {
-    background-color: #1a1a1a;
+    background-color: var(--cor-3);
     color: white;
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
+  }
+
+  footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+      }
+
+  footer p{
+    font-size: 15px;
   }
   
   /* Responsividade */
@@ -146,6 +167,7 @@
     footer {
       font-size: 0.8rem;
     }
+
   }
   
   @media (max-width: 480px) {
